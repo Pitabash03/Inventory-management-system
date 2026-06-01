@@ -17,7 +17,7 @@ app = FastAPI(title="Inventory Management API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://inventory-management-system-zeta-gules.vercel.app"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
