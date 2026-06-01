@@ -16,7 +16,7 @@ function App() {
 
   // GET PRODUCTS
   const getProducts = async () => {
-    const response = await axios.get("http://127.0.0.1:8000/products");
+    const response = await axios.get("https://inventory-management-system-m8vl.onrender.com");
     setProducts(response.data);
   };
 
@@ -26,7 +26,7 @@ function App() {
 
   // ADD PRODUCT
   const addProduct = async () => {
-    await axios.post("http://127.0.0.1:8000/products", {
+    await axios.post("https://inventory-management-system-m8vl.onrender.com", {
       name,
       sku,
       price: Number(price),
@@ -43,7 +43,7 @@ function App() {
 
   // ADD CUSTOMER
   const addCustomer = async () => {
-    await axios.post("http://127.0.0.1:8000/customers", {
+    await axios.post("https://inventory-management-system-m8vl.onrender.com", {
       name: customerName,
       email: customerEmail,
     });
@@ -56,7 +56,7 @@ function App() {
 
   // DELETE PRODUCT
   const deleteProduct = async (id) => {
-    await axios.delete(`http://127.0.0.1:8000/products/${id}`);
+    await axios.delete(`https://inventory-management-system-m8vl.onrender.com/${id}`);
     getProducts();
   };
 
