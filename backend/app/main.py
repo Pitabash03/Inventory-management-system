@@ -13,11 +13,12 @@ Base.metadata.create_all(bind=engine)
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI(title="Inventory Management API")
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "https://inventory-management-system-git-main-pitabash03s-projects.vercel.app",
+        "https://inventory-management-system.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
